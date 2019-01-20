@@ -44,6 +44,10 @@ Lorem magna culpa proident consequat. Qui irure proident ex laboris mollit commo
     <h3 class="project-name">{{ this.name }}</h3>
     <img src="{{ this.image }}" class="project-image" alt="Image of project">
     <p class="project-description">{{ this.description }}</p>
+    <div class="project-btns">
+      <a href="{{ this.liveLink }}" class="project-btn">View Project</a>
+      <a href="{{ this.repoLink }}" class="project-btn">View Repo</a>
+    </div>
   </div>    
   {{/each}}
 </div>

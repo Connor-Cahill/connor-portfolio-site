@@ -30,7 +30,7 @@ mongoose.Promise = global.Promise;
 
 //  setup controllers:
 require('./controllers/index.controller')(app);
-// require('./controllers/project.controller')(app);
+require('./controllers/project.controller')(app);
 
 
 //  setup server:
