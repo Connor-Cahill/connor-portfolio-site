@@ -1,6 +1,8 @@
 body {
   font-size: 16px;
   margin: 0px;
+  font-family: 'Nunito Sans', sans-serif;
+
 }
 
 /*********
@@ -12,5 +14,152 @@ Hero Section Styling:
   justify-content: center;
   align-items: center;
   padding: 16px;
-  
+  font-family: 'VT323', monospace;
+  text-align: center;
+  background-color: #455a64;
+  color: white;
+  height: 360px;
 }
+
+
+
+.hero-header {
+  font-size: 5em;
+  margin-bottom: 2px;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+
+}
+
+.hero-type-text {
+  font-size: 1.5em;
+}
+
+.button-flex {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  justify-content: space-evenly;
+}
+
+.hero-btn {
+  color: #FFBE0F;
+  text-decoration: none;
+  background: none;
+  border: solid #FFBE0F;
+  height: 24px;
+  width: 88px;
+  padding: 4px;
+  border-radius: 8px;
+  transition: all 300ms;
+}
+.hero-btn:hover {
+  background-color: #FFBE0F;
+  color: white;
+}
+.hero-btn::after {
+  color: inherit;
+  text-decoration: none;
+}
+
+/******
+Skills Section Styling:
+**********************/
+
+.connor-skills-section {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #6ba8c7; */
+}
+.skill-type {
+  align-self: center;
+}
+
+.backend-skills {
+  display: flex;
+  flex-direction: column;
+}
+.skill-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 16px;
+}
+
+.frontend-skills {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/******
+About Me Section Styling:
+******************/
+.about-connor-section {
+  padding: 24px;
+  width: 80%;
+  margin: auto;
+}
+
+
+
+
+/*******
+Mobile Responsive Stuff
+***********/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .hero-header {
+    font-size: 2.6em;
+  }
+  .hero-type-text {
+    font-size: .9em;
+  }
+
+  .hero-btn {
+    color: #FFBE0F;
+    text-decoration: none;
+    background: none;
+    border: solid #FFBE0F;
+    height: 16px;
+    width: 72px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 4px;
+    font-size: .8em;
+  
+  }
+
+
+.connor-skills-section {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  background-color: #6ba8c7;
+  justify-content: space-between;
+}
+.skill-type {
+  align-self: center;
+  font-size: .8em;
+  font-weight: 700;
+}
+
+.backend-skills {
+  display: flex;
+  flex-direction: column;
+}
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 8px;
+  font-size: 0.75em;
+  overflow-y: scroll;
+  height: 72px;
+}
+
+.frontend-skills {
+  display: flex;
+  flex-direction: column;
+}
+  
+  }
