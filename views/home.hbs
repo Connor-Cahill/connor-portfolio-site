@@ -1,0 +1,49 @@
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-header">Meet Connor Cahill</h1>
+    <p class="hero-byline">Currently living in San Francisco and studying fullstack web development at Make School</p>
+    <div class="button-flex">
+      <a href="#" class="hero-btn">Projects</a>
+      <a href="#" class="hero-btn">About Connor!</a>
+      <a href="#" class="hero-btn">Get In Touch</a>
+    </div>
+  </div>
+</div>
+<div class="connor-skills-section">
+  <div class="backend-skills">
+    <h3 class="skill-type">Backend Development</h3>
+    <div class="skill-items">
+      <p class="skill-item">NodeJS</p>
+      <p class="skill-item">ExpressJS</p>
+      <p class="skill-item">MongoDB</p>
+      <p class="skill-item">Python</p>
+      <p class="skill-item">Go</p>
+      <p class="skill-item">Flask</p>
+    </div>
+  </div>
+  <div class="frontend-skills">
+    <h3 class="skill-type">Frontend Development</h3>
+    <div class="skill-items">
+      <p class="skill-item">Javascript</p>
+      <p class="skill-item">React</p>
+      <p class="skill-item">HandlebarsJS</p>
+      <p class="skill-item">HTML/CSS</p>
+    </div>
+  </div>
+</div>
+<div class="about-connor-section">
+  <h2 class="about-connor-header">More About Me</h2>
+  <p class="about-connor-content">Tempor laboris dolore adipisicing velit sunt. Sit culpa mollit nisi anim cupidatat duis cillum fugiat consequat in et ut voluptate tempor. Est id eiusmod excepteur irure exercitation culpa duis deserunt qui. Enim adipisicing exercitation commodo sint eu est proident anim fugiat reprehenderit pariatur. Occaecat cupidatat tempor nulla ut sunt minim culpa id. Cillum non officia veniam dolore in nisi nostrud occaecat veniam eu. Occaecat et ut ut consequat laboris minim.
+
+Lorem magna culpa proident consequat. Qui irure proident ex laboris mollit commodo quis ut qui labore ullamco consectetur culpa. Tempor sunt ad labore laboris officia et in. Culpa consequat qui tempor amet ex amet ut commodo tempor consectetur cupidatat. Aliqua labore laborum Lorem sint ipsum reprehenderit adipisicing ea. Labore voluptate laborum consectetur consectetur eu cillum occaecat et Lorem ullamco ea.</p>
+
+</div>
+<div class="projects-section">
+  {{#each projects}}
+  <div class="project-card">
+    <h3 class="project-name">{{ this.name }}</h3>
+    <img src="{{ this.image }}" class="project-image" alt="Image of project">
+    <p class="project-description">{{ this.description }}</p>
+  </div>    
+  {{/each}}
+</div>
