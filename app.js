@@ -1,12 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
+const cookieParser = require('cookie-parser');
+require('dotenv').config();
 const mongoose = require('mongoose');
+const checkAuth = require('./middleware/checkAuth.middleware');
 
 const app = express();
 
 
 //  Middleware Setup:
+app.use(cookieParser());
+app.use(checkAuth);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -31,6 +36,7 @@ mongoose.Promise = global.Promise;
 //  setup controllers:
 require('./controllers/index.controller')(app);
 require('./controllers/project.controller')(app);
+require('./controllers/auth.controller')(app);
 
 
 //  setup server:

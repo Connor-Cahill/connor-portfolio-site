@@ -15,17 +15,17 @@ module.exports = (app) => {
   app.post('/admin', wrap(async (req, res) => {
     const admin = await Admin.findOne({ username: req.body.username}, 'username password').exec();
     if (!admin) {
-      res.send('You are not an admin');
+      console.log('You are not an admin');
       return res.redirect('/');
     }
-    admin.comparePassword(password, (err, isMatch) => {
+    admin.comparePassword(admin.password, (err, isMatch) => {
       if (!isMatch) {
-        res.send('You are not an admin');
+        console.log('You are not an admin');
         return res.redirect('/');
       }
       return true
     });
-    const token = jwt.sign({_id: user._id}, process.env.SECRET, {expiresIn: '60 days'});
+    const token = jwt.sign({_id: admin._id}, process.env.SECRET, {expiresIn: '60 days'});
     res.cookie(process.env.COOKIE, token, {maxAge: 24 * 60 * 60 * 1000, httpOnly: true});
     return res.redirect('/admin-dashboard');
   }));
